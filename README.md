@@ -1,3 +1,6 @@
+![GitHub License](https://img.shields.io/github/license/PedroMR364/WM-Contabilidade)
+
+
 # WC Contabilidade
 Este repositório hospeda o projeto do site https://pedromr364.github.io/WM-Contabilidade/
 ## Autor
