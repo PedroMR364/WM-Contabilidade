@@ -8,300 +8,376 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
-/* CSS RESET */
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
+/* LAYOUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* variáveis (cores) */
+:root {
+  --logotipo: #fba400;
+  --robotica: #535b57;    
+  --cinza: #3c3c3c;    
+  --branco: #ffffff;
+  --gelo: #f1f3f4;
+  --cinzaClaro: #a1a1a1;
+  --vermelho: #cc280f;
 }
 
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estrutura do site */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+
+.Container {
+  margin: 0 auto;
+  padding: 50px 15px 50px 15px;
+}
+
+.Flex,
+.FlexMenu {
+  display: Flex;
+  justify-content: space-between;
+}
+
+.Flex {
+  flex-direction: column;
+}
+
+/* Cartão */
+.Card {
+  margin-top: 30px;
+  width: 338px;
+  height: 520px;
+  background-color: var(--gelo);
+  border: 1px solid var(--cinzaClaro);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.Card img {
+  border-radius: 25px 25px 0px 0px;
+}
+
+.Card h3 {
+  margin: 15px 30px 0px 30px;
+}
+
+.Card p {
+  padding: 10px 15px 50px 15px;
+  text-align: left;
+  color: var(--cinza);
+}
+
+/* Botão */
+.Button {
+  text-decoration: none;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 10px 90px;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/* Seta topo do site */
+#topo {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+/* LAYOUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 
+/* Smartphone portrait >>>>>>>>>>>>>>>>> */
+/* Cabeçalho */
+header {
+  height: 80px;
+}
 
-:root {
-    --lightpink: #EDD1E0;
-    --pretolayout: #000000;
-    --backgroundcard: #f8f8f8;
-    --border: #a1a1a1;
-    --cinzatexto: #434343;
-  }
- 
-  * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
- 
- 
-  /* layout */
-  html {
-    scroll-behavior: smooth;
-  }
- 
-  body {
-    font-family: "Nunito", sans-serif;
-    font-size: 1em;
-  }
- 
+#logo img {
+  width:130px;
+  height: 130px;
+  margin: 10px 0px 0px 10px;
+}
+
+/* Menu */
+#check {
+  display: none;
+}
+
+label {
+  font-size: 3em;
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  color: rgba(60, 60, 60, 0.6);
+  z-index: 2;
+}
+
+nav ul {
+  list-style: none;
+  background-color: rgba(60, 60, 60, 0.9);
+  height: 100vh;
+  position: fixed;
+  top: 80px;
+  right: -70%;
+  width: 70%;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+#check:checked~ul {
+  right: 0;
+}
+
+nav ul li {
+  border-bottom: 0.5px solid var(--cinzaClaro);
+  text-align: right;
+  padding: 15px;
+
+}
+
+/* Esconder estrela do menu */
+#s1,
+#s2,
+#s3,
+#s4 {
+  display: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--gelo)
+}
+
+/* Destaque */
+#destaque {
+  position: relative;
+  height: 60vh;
+}
+
+#destaque video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Banner {
+  display: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cinza);
+  color: var(--branco);
+  text-align: center;
+}
+
+#social {
+  margin-bottom: 25px;
+}
+
+/* Smartphone portrait <<<<<<<<<<<<<<<<< */
+
+
+/* Smartphone landscape >>>>>>>>>>>>>>>> */
+@media (min-width: 576px) {
+
+  /* Layout */
   .Container {
-    margin: 0 auto;
-    padding: 20px 15px 20px 15px;
-  }
- 
-  .Flex {
-    flex-direction: column;
-  }
- 
-  .Flex, .FlexMenu {
-   display: flex;
-   justify-content: space-between;
- }
- 
- .Card {
-   margin-top: 10px;
-   width: 338px;
-   height: 520px;
-   background-color: var(--backgroundcard);
-   border: 1px solid var(--border);
-   border-radius: 25px;
-   text-align: center;
- }
- 
- .Card img {
-   border-radius: 25px 25px 0px 0px;
- }
- 
- .Card h3{
-   margin: 15px 30px 0px 30px;
-   color: var(--pretolayout);
-   font-size: 1.3em;
- }
- 
- .Card p{
-   padding: 10px 15px 30px 15px;
-   text-align: justify;
-   color: var(--cinzatexto);
-   font-size: 1.1em;
- }
- 
- .Button {
-   text-decoration: none;
-   background-color: var(--lightpink);
-   color: var(--pretolayout);
-   padding: 10px 40px 10px 40px;
-   border-radius: 20px;
-   font-size: 1.2em;
-   font-weight: 700;
- }
- 
- /*topo*/
- #topo{
-   position: fixed;
-   right: 10px;
-   bottom: 10px;
- }
-  /* smartphone portrait */
- /*cabeçalho*/
-  header {
-   height:85px;
-  }
- 
-  #logo img {
-    width: 200px;
-    height: 70px;
-    margin-top: 10px;
-    margin-left: 5px;
-  }
- 
-  #check{
-   display: none;
-  }
- 
-  label{
-   font-size: 3em;
-   font-weight: 600;
-   position: fixed;
-   top: 10px;
-   right: 10px;
-  }
- 
-  nav ul{
-   list-style: none;
-   background-color: rgba(237, 209, 224, 0.9);
-   height: 100vh;
-   position: fixed;
-   top: 80px;
-   right: -50%;
-   width: 50%;
-   transition: all 0.5s;
-  }
- 
-  #check:checked~ul {
-   right: 0;
-  }
- 
-  nav ul li{
-   border-bottom: 0.5px solid var(--border);
-   text-align: right;
-   padding: 8px;
-  }
- 
-  nav ul li a{
-   color: var(--pretolayout);
-   text-decoration: none;
-   font-size: 1.3em;
-  }
-  /* footer */
-  footer {
-    background-color: var(--lightpink);
-    color: var(--pretolayout);
-    text-align: center;
-    font-size: medium;
-  }
- 
-  #social {
-    margin-bottom: 25px;
-  }
-
-
-/* O Smartphone portrait >>>>>>>>>>>>>>>>> */
-
-/* Smartphone landscape >>>>>>>>>>>>>>>>>> */
-@media (min-width:576px) {
- 
-  
-    .Container {
       max-width: 540px;
-    }
-  /* cabeçalho */
-    header {
-     max-width: 576px;
-     margin: 0 auto;
-    }
-   
-   #social {
-     margin: 0px;
-   }
   }
- 
-/*Tablet portrait >>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width:768px) {
-    .Container {
+
+  .Flex {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  /* Cabeçalho */
+  header {
+      max-width: 540px;
+      margin: 0 auto;
+  }
+
+  /* Rodapé */
+  #social {
+      margin: 0;
+  }
+}
+
+/* Smartphone landscape <<<<<<<<<<<<<<<< */
+
+
+/* Tablet portrait >>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+
+  /* Layout */
+  .Container {
       max-width: 720px;
- 
-    }
-      /* cabeçalho */
-   header {
-     max-width: 720px;
-     margin: 0 auto;
-     height: 120px;
-    
-    }
- 
-    #logo img {
-     width: 280px;
-     height: 105px;
-     margin-top: 20px;
-     margin-left: 5px;
-   }
- 
-   nav ul{
-     list-style: none;
-     background-color: rgba(237, 209, 224, 0.9);
-     height: 100vh;
-     position: fixed;
-     top: 120px;
-     right: -50%;
-     width: 50%;
-     transition: all 0.5s;
-    }
- 
-    nav ul li a{
-     color: var(--pretolayout);
-     text-decoration: none;
-     font-size: 2em;
-    }
- 
-    nav ul li{
-     border-bottom: 0.5px solid var(--border);
-     text-align: right;
-     padding: 8px;
-    }
- 
   }
 
-/* Tablet landscape >>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width:992px) {
-    .Container {
+  /* Cabeçalho */
+  header {
+      max-width: 720px;
+      height: 100px;
+  }
+
+  #logo img {
+      width: 600px;
+      height: 250px;
+      margin: 10px 0px 0px 10px;
+  }
+
+  /* Menu */
+  label {
+      font-size: 4em;
+      top: 25px;
+      right: 5px;
+  }
+
+  nav ul {
+      top: 100px;
+      right: -50%;
+      width: 50%;
+  }
+
+  /* Destaque */
+  .Banner {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      color: var(--branco);
+  }
+
+  #slogan {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.75em;
+      font-weight: 400;
+  }
+
+  #textoDestaque {
+      font-size: 1em;
+      font-weight: 500;
+      margin-bottom: 10px;
+  }
+}
+
+/* Tablet portrait <<<<<<<<<<<<<<<<<<<<< */
+
+
+/* Tablet landscape >>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+
+  /* Layout */
+  .Container {
       max-width: 960px;
-    }
-    header {
-     max-width: 992px;
-     margin: 0 auto;
-     height: 120px;
-    
-    }
- 
-    
   }
 
-/* PCs ou Notebooks HD >>>>>>>>>>>>>>>>>>> */
+  /* Cabeçalho */
+  header {
+      max-width: 992px;
+  }
+}
+
+/* Tablet landscape <<<<<<<<<<<<<<<<<<<< */
+
+
+/* PCs ou notebooks HD >>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
-    .Container {
+
+  /* Layout */
+  .Container {
       max-width: 1140px;
-    }
-    header {
-     max-width: 1140px;
-     margin: 0 auto;
-    }
-  
-     label{
-       display: none;
-     }
- 
-     nav ul{
-       width: 100%;
-       position: static;
-       height: auto;
-       background-color: #ffffff;
-       margin-top: 50px;
-     }
-   
-     nav ul li{
-       border: 0;
-       float: left;
-     }
- 
-     nav ul li a {
-       color: var(--pretolayout);
-       font-size: 1.4em;
-     }
- 
-     nav ul li a:hover{
-       color: darkred;
-     }
- 
-     .Flex {
-       flex-direction: row-reverse;
-       justify-content: space-between;
-       align-items: center;
-     }
-     #logo img {
-       margin-top: 20px;
-       margin-left: 5px;
-     }
   }
 
-/*PCs ou Notebooks TV Full HD + >>>>>>>>>> */
-@media (min-width: 1400px) {
-    .Container {
-      max-width: 1360px;
- 
-    }
-    header {
-     max-width: 1360px;
-     margin: 0 auto;
-    }
- 
-   
+  /* Cabeçalho */
+  header {
+      max-width: 1140px;
+      height: 125px;
   }
+
+  #logo img {
+      width: 340px;
+      height: 180px;
+  }
+
+  /* Menu */
+  label {
+      display: none;
+  }
+
+  nav ul {
+      width: 100%;
+      position: static;
+      height: auto;
+      background-color: var(--branco);
+      margin-top: 51px;
+  }
+
+  nav ul li {
+      border: 0;
+      float: left;
+  }
+
+  nav ul li a {
+      color: var(--robotica);
+      font-weight: 500;
+  }
+  
+  /* Destacar link ativo do menu */
+  #index span#s1,
+  #sobre span#s2,
+  #projetos span#s3,
+  #apoio span#s4 {
+      display: inline;
+      color: var(--vermelho);
+  }
+
+  /* Destaque */
+  #destaque {
+      height: 75vh;
+  }
+
+  #slogan {
+      font-size: 2em;
+      font-weight: 400;
+  }
+
+  #textoDestaque {
+      font-size: 1.1em;
+  }
+}
+
+/* PCs ou notebooks HD <<<<<<<<<<<<<<<<< */
+
+
+/* PCs ou notebooks Full HD+ >>>>>>>>>>> */
+@media (min-width: 1400px) {
+
+  /* Cabeçalho */
+  header {
+      height: 150px;
+  }
+
+  #logo img {
+      width: 340px;
+      height: 180px;
+  }
+}
+
+/* PCs ou notebooks Full HD+ <<<<<<<<<<< */
