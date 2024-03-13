@@ -4,56 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Importante para SEO -->
-    <title>Sobre</title>
+    <title>WM Contabilidade</title>
     <!-- Link com a folha de estilo -->
     <link rel="stylesheet" href="style.css">
     <!-- Importante para SEO -->
-    <meta name="description" content="Um site dedicado a uma empresa real de Contabilidade para fins de Consultoria.">
+    <meta name="description" content="Um site dedicado a um escritório de Contabilidade existente.">
     <link rel="icon" href="./img/icon.jpg">
 </head>
 <body>
 
     <!-- Cabeçalho -->
     <header>
-        <div class = "Container Flex">
-            <div id ="logo">
-                <img src="./img/logotipo.jpg" width="700" alt="logotipo">
+        <div class="FlexMenu">
+            <div id="logo">
+                <img src="./img/logo.jpg" alt="logotipo">
             </div>
             <nav>
-                <input type="checkbox" 
-                id="check">
-                <label for="check">&#x2630;
-                </label>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
                 <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="sobre.html">sobre</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="informacoes.html">informações</a></li>
-                    <li><a href="contato.html">contato</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Conteudo Principal  -->
+    <!-- Destaque -->
+    <div id="destaque">
+        <img src="img/logotipo.jpg" width="1600" height="570"></img>
+        <div class="Banner">
+            <div class="Container">
+                <p id="textoDestaque">Um site dedicado a Empresa WC Contabilidade</p>
+            </div>
+        </div>
+    </div>
 
-    <main class="container">
-        <H1>Sobre</H1>
-    </main>
+    <!-- Projetos -->
+    <section id="projetos">
+        <div class="Container">
+            <h2>O que você <span id="destacado2">gostaria</span>de fazer hoje?</h2>
+            <!-- Cards -->
+            <div id="containerCards">
+                <div class="Card">
+                    <img src="img/cartao-1.jpg" alt="Cuidados com o seu dinheiro">
+                    <h3>Cuidados com o seu dinheiro</h3>
+                    <p>Cuidar do seu dinheiro nunca se tornou tão facil como é agora</p>
+                    <a href="" class="Button">Saiba +</a>
+                </div>
+                <div class="Card">
+                    <img src="img/cartao-2.jpg" alt="Canais sugeridos">
+                    <h3>Canais sobre Finanças</h3>
+                    <p>Saiba sobre alguns Canais do Youtube para aprender na prática sobre Finanças</p>
+                    <a href="" class="Button">Saiba +</a>
+                </div>
+                <div class="Card">
+                    <img src="img/icon.png" alt="robótica com arduino">
+                    <h3>Métodos de Renda Extra</h3>
+                    <p>Saiba alguns métodos para ECONOMIZAR dinheiro</p>
+                    <a href="" class="Button">Saiba +</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Em construção -->
-    <section class="container">
+    <section class="Container">
         <div class="Card">
-            <img src="./img/em-construcao.png" alt="em-construcao">
+            <img src="./img/em-construcao.png" alt="Em construção">
             <h3>Em construção</h3>
             <p>Este site está sendo construido. logo logo você poderá ver esse site da forma real que ele é!</p>
-            <a href="" target="_blank">AGUARDE!</a>
+            <a href="https://www.instagram.com/https.pedro364/" target="_blank">AGUARDE!</a>
         </div>
-
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <div class="container Flex">
+        <div class="Container Flex">
             <div id="social">
                 <a href="https://wa.me/5511977675717" target="_blank"><img src="./img/whatsapp.png" alt="Whatsapp"></a>
                 <a href="https://www.instagram.com/https.pedro364/" target="_blank"><img src="./img/instagram.png" alt="instagram"></a>
