@@ -52,6 +52,7 @@ body {
 
 .Container2 {
   margin: 0 auto;
+  width: 100%;
   padding: 25px 15px 50px 15px;
 }
 
@@ -63,6 +64,14 @@ body {
 
 .Flex {
   flex-direction: column;
+}
+
+.Flex2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
 }
 
 .FlexIntro {
@@ -201,6 +210,9 @@ nav ul li a {
   position: relative;
   height: 60vh;
   top: 85px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 #destaque video {
@@ -278,6 +290,11 @@ footer {
 
 #social {
   margin-bottom: 25px;
+}
+
+.titulo {
+  background-color: #cc280f;
+  height: 100px;
 }
 
 /* Smartphone portrait <<<<<<<<<<<<<<<<< */
