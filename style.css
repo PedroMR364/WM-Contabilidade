@@ -25,6 +25,15 @@
   border: 0;
 }
 
+/* Banner */
+
+main {
+  background: url(img/logotipo.jpg);
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
 /* Scroll suave */
 html {
   scroll-behavior: smooth;
@@ -39,6 +48,11 @@ body {
 .Container {
   margin: 0 auto;
   padding: 50px 15px 50px 15px;
+}
+
+.Container2 {
+  margin: 0 auto;
+  padding: 25px 15px 50px 15px;
 }
 
 .Flex,
@@ -122,12 +136,13 @@ body {
 /* Smartphone portrait >>>>>>>>>>>>>>>>> */
 /* Cabeçalho */
 header {
-  height: 80px;
+  height: 160px;
+
 }
 
-#logo img {
-  width: 150px;
-  height: 150px;
+header img {
+  width: 96px;
+  height: 96px;
   margin: 10px 0px 0px 10px;
 }
 
@@ -185,7 +200,7 @@ nav ul li a {
 #destaque {
   position: relative;
   height: 60vh;
-  top: 100px;
+  top: 85px;
 }
 
 #destaque video {
@@ -307,18 +322,18 @@ footer {
 
   /* Layout */
   .Container {
-      max-width: 720px;
+    max-width: 720px;
   }
 
   /* Cabeçalho */
   header {
       max-width: 720px;
-      height: 100px;
+      height: 160px;
   }
 
   #logo img {
-      width: 150px;
-      height: 150px;
+      width: 96px;
+      height: 96px;
       margin: 10px 0px 0px 0px;
   }
 
@@ -424,8 +439,8 @@ footer {
   }
 
   #logo img {
-      width:150px;
-      height: 150px;
+      width: 96px;
+      height: 96px;
   }
 
   /* Menu */
@@ -517,8 +532,8 @@ footer {
   }
 
   #logo img {
-      width: 150px;
-      height: 150px;
+      width: 96px;
+      height: 96px;
   }
 }
 
