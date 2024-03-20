@@ -4,6 +4,8 @@
 
 # WC Contabilidade
 Este repositório hospeda o projeto do site https://pedromr364.github.io/WM-Contabilidade/
+## Acessar site
+[QrCode](https://github.com/PedroMR364/WM-Contabilidade/blob/main/doc/qrcode_pedromr364.github.io.png)
 ## Autor
 Pedro Miranda
 ## Links utilizados
